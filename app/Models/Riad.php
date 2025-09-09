@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Riad extends Model
 {
     protected $table = 'riad';
-    protected $primaryKey = 'id'; 
+    protected $primaryKey = 'id_riad'; 
 
     public function chambres()
     {
-        return $this->hasMany(Chambre::class, 'id_riad', 'id');
+        return $this->hasMany(Chambre::class, 'id_riad', 'id_riad');
     }
 }
